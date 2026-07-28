@@ -1,0 +1,13 @@
+volumes:
+  db_data:
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_PASSWORD: wca
+      POSTGRES_USER: wca
+      POSTGRES_DB: wca_dev
+    ports: 
+      - "5432:5432" 
+    volumes:
+      - db_data:/var/lib/postgresql
